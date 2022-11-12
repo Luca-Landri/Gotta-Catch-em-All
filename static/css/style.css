@@ -2,7 +2,7 @@
 
 *{
     margin: 0px;
-    padding: 0px;
+    padding: 0px;;
 }
 
 #page{
@@ -29,4 +29,17 @@ h1{
 }
 .bold{
     font-weight: bold;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.form-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
