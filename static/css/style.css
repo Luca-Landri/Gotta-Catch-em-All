@@ -28,6 +28,7 @@ h1{
     padding-top: 30px;
     padding-bottom: 32px;
 }
+
 .bold{
     font-weight: bold;
 }
@@ -35,8 +36,8 @@ h1{
 .form-group{
     display: flex;
     flex-direction: row;
-
 }
+
 form{
     display: flex;
     flex-direction: column;
@@ -46,8 +47,8 @@ form{
 .form-element{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    padding-right: 12px;
 }
 
 .form-element input{
@@ -56,15 +57,16 @@ form{
     border-radius: 15px;
     border: 1px solid black ;
     padding-left: 10px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Inter', sans-serif;
     text-align: center;
 }
 
 .form-element label{
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     padding-bottom: 10px;
+    margin-left: 15px;
 }
 
 #ludovica{
@@ -78,10 +80,12 @@ form{
     font-size: 25px;
     font-weight: bold;
     color: #FFFFFF;
-
 }
 
 #bottone{
     padding-top: 25px;
 }
 
+.form-element2{
+    padding-top: 26px;
+}
