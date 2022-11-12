@@ -37,6 +37,11 @@ h1{
     flex-direction: row;
 
 }
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .form-element{
     display: flex;
@@ -61,3 +66,22 @@ h1{
     font-size: 16px;
     padding-bottom: 10px;
 }
+
+#ludovica{
+    width: 340px;
+    height: 52px;
+    border-radius: 15px;
+    background-color: #94E1A5;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+
+}
+
+#bottone{
+    padding-top: 25px;
+}
+
