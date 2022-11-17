@@ -1,31 +1,33 @@
-let hp = document.querySelector('.vita');
-let attack = document.querySelector('.attacco');
-let defense = document.querySelector('.difesa');
-let speed = document.querySelector('.velocita');
-let specialAttack = document.querySelector('.attacco_spaziale');
-let specialDefense = document.querySelector('.difesa_speciale');
-let button = document.querySelector('.bottone');
+let form = document.querySelector("#myForm")
 
-button.addEventListener('click', function() {
-    if (checkRequired(hp.value) && checkValue(hp.value) && checkRequired(attack.value) && checkValue(attack.value) && checkRequired(defense.value) && checkValue(defense.value) && checkRequired(speed.value) && checkValue(speed.value) && checkRequired(specialAttack.value) && checkValue(specialAttack.value) && checkRequired(specialDefense.value) && checkValue(specialDefense.value)) {
-        alert('ok');
-    } else {
-        alert('errore');
-    }
- });
+form.addEventListener("submit", function(e){
+    e.preventDefault()
 
-function checkRequired(value) {
-    if (value.trim() === '') {
-        return false;
-    } else {
-        return true;
-    }
-};
+    //let vita = parseInt(document.querySelector("input[name=vita]").value)
+    let vita = document.querySelector("input[name=vita]").value
+    vita = parseInt(vita.replace(/[^a-zA-Z0-9 ]/g, ''))
 
-function checkValue(value) {
-    if (value < 0 || value > 255) {
-        return false;
-    } else {
-        return true;
+    let attacco = document.querySelector("input[name=attacco]").value
+    attacco =  parseInt(attacco.replace(/[^a-zA-Z0-9 ]/g, ''))
+
+    let difesa = document.querySelector("input[name=difesa]").value
+    difesa = parseInt(difesa.replace(/[^a-zA-Z0-9 ]/g, ''))
+    
+    let attspec = document.querySelector("input[name=attspeciale]").value
+    attspec = parseInt(attspec.replace(/[^a-zA-Z0-9 ]/g, ''))
+
+    let difesapeciale = document.querySelector("input[name=difesapeciale]").value
+    difesapeciale = parseInt(difesapeciale.replace(/[^a-zA-Z0-9 ]/g, ''))
+
+    let velocita = document.querySelector("input[name=velocita]").value
+    velocita = parseInt(velocita.replace(/[^a-zA-Z0-9 ]/g, ''))
+
+    if(isNaN(vita) || isNaN(attacco) || isNaN(difesa) || isNaN(attspec) ||  isNaN(difesapeciale) || isNaN(velocita)){
+        alert("Errore, i campi devono essere necessariamente numerici")
+    }else{
+        if(vita > 0 && vita <= 300 && attacco > 0 && attacco <= 300 && difesa > 0 && difesa <= 300 && attspec > 0 && attspec <= 300  && difesapeciale > 0 && difesapeciale <= 300 && velocita > 0 && velocita <= 300){
+            console.log("Sto a fuzniona")
+            form.submit()
+        }
     }
-};
+})
