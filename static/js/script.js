@@ -5,22 +5,16 @@ form.addEventListener("submit", function(e){
 
     //let vita = parseInt(document.querySelector("input[name=vita]").value)
     let vita = document.querySelector("input[name=vita]").value
-    vita = parseInt(vita.replace(/[^a-zA-Z0-9 ]/g, ''))
 
     let attacco = document.querySelector("input[name=attacco]").value
-    attacco =  parseInt(attacco.replace(/[^a-zA-Z0-9 ]/g, ''))
 
     let difesa = document.querySelector("input[name=difesa]").value
-    difesa = parseInt(difesa.replace(/[^a-zA-Z0-9 ]/g, ''))
     
     let attspec = document.querySelector("input[name=attspeciale]").value
-    attspec = parseInt(attspec.replace(/[^a-zA-Z0-9 ]/g, ''))
 
     let difesapeciale = document.querySelector("input[name=difesapeciale]").value
-    difesapeciale = parseInt(difesapeciale.replace(/[^a-zA-Z0-9 ]/g, ''))
 
     let velocita = document.querySelector("input[name=velocita]").value
-    velocita = parseInt(velocita.replace(/[^a-zA-Z0-9 ]/g, ''))
 
     if(isNaN(vita) || isNaN(attacco) || isNaN(difesa) || isNaN(attspec) ||  isNaN(difesapeciale) || isNaN(velocita)){
         alert("Errore, i campi devono essere necessariamente numerici")
