@@ -1,34 +1,31 @@
-<<<<<<< Updated upstream
-=======
-var hp = document.querySelector('.vita');
-var attack = document.querySelector('.attacco');
-var defense = document.querySelector('.difesa');
-var speed = document.querySelector('.velocita');
-var specialAttack = document.querySelector('.attacco_spaziale');
-var specialDefense = document.querySelector('.difesa_speciale');
-var button = document.querySelector('.bottne');
+let form = document.querySelector("#myForm")
+let datas = document.querySelectorAll(".datas")
+error = false;
+console.log(form);
 
-button.addEventListener('click', function() {
-    if (checkRequired(hp.value) && checkValue(hp.value) && checkRequired(attack.value) && checkValue(attack.value) && checkRequired(defense.value) && checkValue(defense.value) && checkRequired(speed.value) && checkValue(speed.value) && checkRequired(specialAttack.value) && checkValue(specialAttack.value) && checkRequired(specialDefense.value) && checkValue(specialDefense.value)) {
-        alert('ok');
-    } else {
-        alert('errore');
-    }
- });
+form.addEventListener ("submit", function(event) {
+    event.preventDefault();
+    let j = 0;
+    console.log("ciao");
+    console.log(datas.length);
+     for (let i = 0; i < datas.length; i++) {
+         if (datas[i].value == "" || isNaN(datas[i].value)) {
+            error = true;
+        } else if (datas[i].value > 0 && datas[i].value <= 300) {
+            console.log("ok");
+            j++;
+        } else if (datas[i].value > 300 || datas[i].value < 0) {
+            error = true;
+        }
 
-function checkRequired(value) {
-    if (value.trim() === '') {
-        return false;
-    } else {
-        return true;
-    }
-};
+        if (j == datas.length - 1) {
+            form.submit();
+        }
+     }
 
-function checkValue(value) {
-    if (value < 0 || value > 255) {
-        return false;
-    } else {
-        return true;
-    }
-};
->>>>>>> Stashed changes
+     if (error) {
+        alert("Inserisci un valore valido");
+     }
+    
+})
+
