@@ -2,7 +2,7 @@
 
 *{
     margin: 0px;
-    padding: 0px;
+    padding: 0px;;
 }
 
 #page{
@@ -26,7 +26,66 @@ h1{
     font-size: 18px;
     text-align: center;
     padding-top: 30px;
+    padding-bottom: 32px;
 }
+
 .bold{
     font-weight: bold;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 12px;
+}
+
+.form-element input{
+    width: 340px;
+    height: 52px;
+    border-radius: 15px;
+    border: 1px solid black ;
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.form-element label{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+}
+
+#ludovica{
+    width: 340px;
+    height: 52px;
+    border-radius: 15px;
+    background-color: #94E1A5;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#bottone{
+    padding-top: 25px;
+}
+
+.form-element2{
+    padding-top: 26px;
 }
