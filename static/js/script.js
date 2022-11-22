@@ -1,27 +1,30 @@
 let form = document.querySelector("#myForm")
+let datas = document.querySelectorAll(".datas")
+error = false;
+console.log(form);
 
-form.addEventListener("submit", function(e){
-    e.preventDefault()
-
-    //let vita = parseInt(document.querySelector("input[name=vita]").value)
-    let vita = document.querySelector("input[name=vita]").value
-
-    let attacco = document.querySelector("input[name=attacco]").value
-
-    let difesa = document.querySelector("input[name=difesa]").value
-    
-    let attspec = document.querySelector("input[name=attspeciale]").value
-
-    let difesapeciale = document.querySelector("input[name=difesapeciale]").value
-
-    let velocita = document.querySelector("input[name=velocita]").value
-
-    if(isNaN(vita) || isNaN(attacco) || isNaN(difesa) || isNaN(attspec) ||  isNaN(difesapeciale) || isNaN(velocita)){
-        alert("Errore, i campi devono essere necessariamente numerici")
-    }else{
-        if(vita > 0 && vita <= 300 && attacco > 0 && attacco <= 300 && difesa > 0 && difesa <= 300 && attspec > 0 && attspec <= 300  && difesapeciale > 0 && difesapeciale <= 300 && velocita > 0 && velocita <= 300){
-            console.log("Sto a fuzniona")
-            form.submit()
+form.addEventListener ("submit", function(event) {
+    event.preventDefault();
+    let j = 0;
+    console.log("ciao");
+    console.log(datas.length);
+     for (let i = 0; i < datas.length; i++) {
+         if (datas[i].value == "" || isNaN(datas[i].value)) {
+            error = true;
+        } else if (datas[i].value > 0 && datas[i].value <= 300) {
+            console.log("ok");
+            j++;
+        } else if (datas[i].value > 300 || datas[i].value < 0) {
+            error = true;
         }
-    }
+
+        if (j == datas.length - 1) {
+            form.submit();
+        }
+     }
+
+     if (error) {
+        alert("Inserisci un valore valido");
+     }
+    
 })
