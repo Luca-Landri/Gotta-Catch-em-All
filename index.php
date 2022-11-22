@@ -1,10 +1,10 @@
 <?php
-$HP = $_POST['HP'];
-$ATK = $_POST['ATK'];
-$DEF = $_POST['DEF'];
-$SPTK = $_POST['SPTK'];
-$SPDEF = $_POST['SPDEF'];
-$SPEED = $_POST['SPEED'];
+$HP = $_POST['vita'];
+$ATK = $_POST['attacco'];
+$DEF = $_POST['difesa'];
+$SPTK = $_POST['attspeciale'];
+$SPDEF = $_POST['difesapeciale'];
+$SPEED = $_POST['velocita'];
 
 if(isset( $_POST['HP']) && isset( $_POST['ATK'])  && isset( $_POST['DEF'])  && isset( $_POST['SPTK'])  && isset( $_POST['SPDEF'])  && isset( $_POST['SPEED'])) {
 
