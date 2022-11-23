@@ -16,7 +16,10 @@ function read_csv() {
     return $data;
 }
 
-
+function get_pokemonById($id) {
+    $data = read_csv();
+    return $data[$id];
+}
 
 if(isset( $_POST['vita']) && isset( $_POST['attacco'])  && isset( $_POST['difesa'])  && isset( $_POST['attspeciale'])  && isset( $_POST['difesapeciale'])  && isset( $_POST['velocita'])) {
 
@@ -29,6 +32,8 @@ if(isset( $_POST['vita']) && isset( $_POST['attacco'])  && isset( $_POST['difesa
                     echo $data[$i][$j] . " ";
                 }
             }
+            echo "<br>";
+            print_r(get_pokemonById(1));
         } else {
             echo "Inserire un numero compreso tra 1 e 300";
         }
