@@ -21,6 +21,25 @@ function get_pokemonById($id) {
     return $data[$id];
 }
 
+function euclidean_distance($HP, $ATK, $DEF, $SPTK, $SPDEF, $SPEED){
+    $data = read_csv();
+    $dist = array();
+
+    for ($i=1; $i<count($data); $i++) {
+        array_push($dist, 
+        array(
+            "id" => $data[$i][0],
+            "dist" => sqrt(pow($HP - $data[$i][4], 2) + pow($ATK - $data[$i][5], 2) + pow($DEF - $data[$i][6], 2) + pow($SPTK - $data[$i][7], 2) + pow($SPDEF - $data[$i][8], 2) + pow($SPEED - $data[$i][9], 2))
+        )
+
+        );
+    }
+
+    return $dist;
+}
+
+
+
 if(isset( $_POST['vita']) && isset( $_POST['attacco'])  && isset( $_POST['difesa'])  && isset( $_POST['attspeciale'])  && isset( $_POST['difesapeciale'])  && isset( $_POST['velocita'])) {
 
     if(is_numeric($HP) && is_numeric($ATK) && is_numeric($DEF) && is_numeric($SPTK) && is_numeric($SPDEF) && is_numeric($SPEED)) {
@@ -34,6 +53,11 @@ if(isset( $_POST['vita']) && isset( $_POST['attacco'])  && isset( $_POST['difesa
             }
             echo "<br>";
             print_r(get_pokemonById(1));
+
+            echo "<br>";
+
+            $dist = euclidean_distance($HP, $ATK, $DEF, $SPTK, $SPDEF, $SPEED);
+            print_r($dist);
         } else {
             echo "Inserire un numero compreso tra 1 e 300";
         }
