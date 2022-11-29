@@ -2,7 +2,8 @@
 
 *{
     margin: 0px;
-    padding: 0px;;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 #page{
@@ -88,4 +89,61 @@ form{
 
 .form-element2{
     padding-top: 26px;
+}
+
+.cardcontainer{
+    border-radius: 15px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 38px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-right: 12px;
+    margin-bottom: 27px;
+    font-family: 'Inter', sans-serif;
+}
+
+.containerimg{
+    z-index: 1;
+    background-color: #E36736;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 18px;
+    padding-right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.statscontainer{
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 21px;
+    padding-right: 60px;
+}
+
+.statscard{
+    display: flex;
+}
+
+.statscard > div{
+    margin-right: 6px;
+}
+
+.gencard{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.typescard{
+    margin-bottom: 5px;
 }
