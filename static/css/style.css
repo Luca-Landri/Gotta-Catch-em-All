@@ -2,7 +2,8 @@
 
 *{
     margin: 0px;
-    padding: 0px;;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 #page{
@@ -91,16 +92,25 @@ form{
 }
 
 .cardcontainer{
-    background-color: #ffffff;
     border-radius: 15px;
-    z-index: 0;
     margin-left: 50px;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 38px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
 }
 .container{
     display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-right: 12px;
+    margin-bottom: 27px;
+    font-family: 'Inter', sans-serif;
 }
+
 .containerimg{
     z-index: 1;
     background-color: #E36736;
@@ -120,16 +130,20 @@ form{
     padding-left: 21px;
     padding-right: 60px;
 }
+
 .statscard{
     display: flex;
 }
+
 .statscard > div{
     margin-right: 6px;
 }
+
 .gencard{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
 .typescard{
     margin-bottom: 5px;
 }
