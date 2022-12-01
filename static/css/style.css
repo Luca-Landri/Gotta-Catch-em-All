@@ -155,3 +155,8 @@ form{
 #ludovica:active{
     background-color: #5CE284;
 }
+
+.cardimg{
+    width: 100px;
+    height: 100px;
+}
