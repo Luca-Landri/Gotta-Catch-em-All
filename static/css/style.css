@@ -6,19 +6,23 @@
     box-sizing: border-box;
 }
 
+body {
+    background: rgb(222,233,255);
+    background: linear-gradient(90deg, rgba(222,233,255,1) 0%, rgba(238,244,255,1) 100%);
+}
+
 #page{
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #EEF4FF;
 }
 
 h1{
     font-size: 44px;
     text-align: center;
-    padding-top: 75px;
+    padding-top: 55px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -27,40 +31,46 @@ h1{
     font-size: 18px;
     text-align: center;
     padding-top: 30px;
-    padding-bottom: 32px;
 }
 
 .bold{
     font-weight: bold;
 }
 
-.form-group{
+#inputForm {
     display: flex;
     flex-direction: row;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 60%;
     align-items: center;
-}
-
-.form-element{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding-right: 12px;
 }
 
-.form-element input{
+.input-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.datas {
+    height: 30px;
+    border-radius: 20px;
     width: 340px;
     height: 52px;
     border-radius: 15px;
     border: 1px solid black ;
-    padding-left: 10px;
     font-size: 14px;
     font-family: 'Inter', sans-serif;
     text-align: center;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    padding-right: 12px;
+    margin-top: 26px;
 }
 
 .form-element label{
