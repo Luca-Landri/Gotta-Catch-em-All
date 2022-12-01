@@ -160,3 +160,34 @@ form{
     width: 100px;
     height: 100px;
 }
+
+@media screen and (max-width: 768px){
+    h1 {
+        font-size: 30px;
+    }
+
+    #sottotitolo{
+        font-size: 14px;
+    }
+
+    .form-element input{
+        width: 250px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .form-element label{
+        font-size: 12px;
+    }
+
+    #ludovica{
+        width: 250px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .cardcontainer{
+        width: 100%;
+        margin-left: 0px;
+    }
+}
