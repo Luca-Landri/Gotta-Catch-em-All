@@ -16,7 +16,7 @@
             all'argoritmo di Machine Leanring <span class="bold">KNN(K-Nearest Neighbors)</span> i 5 Pokémon più simili a quello che hai <br> inserito.</p> 
         </p>
 
-        <form id="inputForm">
+        <form id="inputForm" action="./index.php" method="post">
             <div class="input-section">
                 <div class="form-element">
                     <label for="vita"> <span class="bold">Punti Vita (HP)</span></label>
