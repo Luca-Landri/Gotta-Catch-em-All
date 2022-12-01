@@ -67,7 +67,30 @@ if(isset( $_POST['vita']) && isset( $_POST['attacco'])  && isset( $_POST['difesa
             for ($i = 0; $i < count($kPokemon); $i++) {
                 $pokemon = get_pokemonById($kPokemon[$i]['id']);
                 echo "<br>";
-                echo $pokemon[1];
+                echo '
+                    <div class="container">
+                        <div class="containerimg">
+                            <img class="cardimg" src="../static/img/bulbasaur.png" alt="Immagine del pokemon: {nomepokemon}">
+                        </div>
+                        <div class="statscontainer">
+                            <h3 class="namecard">'.$pokemon[1].'</h3>
+                            <p class="gencard">gen. '.$pokemon[11].'</p>
+                            <p class="typescard">Tipi: <span class="bold">'.$pokemon[2].', '.$pokemon[3].'</span></p>
+                            <div class="statscard">
+                                <div>
+                                    <p>HP <span class="bold">'.$pokemon[5].'</span></p>
+                                    <p>Atk <span class="bold">'.$pokemon[6].'</span></p>
+                                    <p>Def <span class="bold">'.$pokemon[7].'</span></p>
+                                </div>
+                                <div>
+                                    <p>Sp. Atk <span class="bold">'.$pokemon[8].'</span></p>
+                                    <p>Sp. Def <span class="bold">'.$pokemon[9].'</span></p>
+                                    <p>Speed <span class="bold">'.$pokemon[10].'</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ';
             }
         } else {
             echo "Inserire un numero compreso tra 1 e 300";
