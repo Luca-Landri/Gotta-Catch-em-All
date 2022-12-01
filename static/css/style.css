@@ -147,3 +147,11 @@ form{
 .typescard{
     margin-bottom: 5px;
 }
+
+#ludovica:hover{
+    background-color: #7EDD9A;
+}
+
+#ludovica:active{
+    background-color: #5CE284;
+}
