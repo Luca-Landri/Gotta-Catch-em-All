@@ -67,7 +67,12 @@
                 
                 function get_pokemonById($id) {
                     $data = read_csv();
-                    return $data[$id];
+
+                    for ($i = 1; $i < count($data); $i++) {
+                        if ($data[$i][0] == $id) {
+                            return $data[$i];
+                        }
+                    }
                 }
 
                 function euclidean_dist($HP, $ATK, $DEF, $SPTK, $SPDEF, $SPEED, $data) {
@@ -77,7 +82,7 @@
                     for ($i = 1; $i < count($data); $i++) {
                         array_push($dist,
                             array("id" => $data[$i][0],
-                            "dist" => sqrt(pow($HP - $data[$i][4], 2) + pow($ATK - $data[$i][5], 2) + pow($DEF - $data[$i][6], 2) + pow($SPTK - $data[$i][7], 2) + pow($SPDEF - $data[$i][8], 2) + pow($SPEED - $data[$i][9], 2))
+                            "dist" => sqrt(pow($HP - $data[$i][5], 2) + pow($ATK - $data[$i][6], 2) + pow($DEF - $data[$i][7], 2) + pow($SPTK - $data[$i][8], 2) + pow($SPDEF - $data[$i][9], 2) + pow($SPEED - $data[$i][10], 2))
                         ));
                     }
                     
