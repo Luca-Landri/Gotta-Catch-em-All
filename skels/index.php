@@ -12,8 +12,8 @@
 <body>
     <div id="page">
         <h1>Gotta Check'em All</h1>
-        <p id="sottotitolo"> <span class="bold">Benvenuto</span>  nel tuo motore di ricerca per Pokémon. Potrai inserire le caratteristiche di un <span class="bold">Pokémon fittizio</span> e il back-end <br> cercherà grazie 
-            all'argoritmo di Machine Leanring <span class="bold">KNN(K-Nearest Neighbors)</span> i 5 Pokémon più simili a quello che hai <br> inserito.</p> 
+        <p id="sottotitolo"> <span class="bold">Benvenuto</span>  nel tuo motore di ricerca per Pokémon. Potrai inserire le caratteristiche di un <span class="bold">Pokémon fittizio</span> e il back-end cercherà grazie 
+            all'argoritmo di Machine Leanring <span class="bold">KNN(K-Nearest Neighbors)</span> i 5 Pokémon più simili a quello che hai inserito.</p> 
         </p>
 
         <form id="inputForm" action="./index.php" method="post">
