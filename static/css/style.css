@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(222,233,255);
+    background: linear-gradient(90deg, rgba(222,233,255,1) 0%, rgba(238,244,255,1) 100%);
+}
+
+#page{
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 44px;
+    text-align: center;
+    padding-top: 55px;
+    font-family: 'Inter', sans-serif;
+}
+
+#sottotitolo{
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 30px;
+    width: 70%;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#inputForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.datas {
+    height: 30px;
+    border-radius: 20px;
+    width: 340px;
+    height: 52px;
+    border-radius: 15px;
+    border: 1px solid black ;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    padding-right: 12px;
+    margin-top: 26px;
+}
+
+.form-element label{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+}
+
+#ludovica{
+    width: 340px;
+    height: 52px;
+    border-radius: 15px;
+    background-color: #94E1A5;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#bottone{
+    padding-top: 25px;
+}
+
+.form-element2{
+    padding-top: 26px;
+}
+
+.cardcontainer{
+    border-radius: 15px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 38px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-right: 12px;
+    margin-bottom: 27px;
+    font-family: 'Inter', sans-serif;
+}
+
+.containerimg{
+    z-index: 1;
+    background-color: #E36736;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 18px;
+    padding-right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.statscontainer{
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 21px;
+    padding-right: 60px;
+}
+
+.statscard{
+    display: flex;
+}
+
+.statscard > div{
+    margin-right: 6px;
+}
+
+.gencard{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.typescard{
+    margin-bottom: 5px;
+}
+
+#ludovica:hover{
+    background-color: #7EDD9A;
+}
+
+#ludovica:active{
+    background-color: #5CE284;
+}
+
+.cardimg{
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (max-width: 768px){
+    h1 {
+        font-size: 30px;
+    }
+
+    #sottotitolo{
+        font-size: 14px;
+    }
+
+    .form-element input{
+        width: 250px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .form-element label{
+        font-size: 12px;
+    }
+
+    #ludovica{
+        width: 250px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .cardcontainer{
+        width: 100%;
+        margin-left: 0px;
+    }
+}
